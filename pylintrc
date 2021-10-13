@@ -1,0 +1,12 @@
+[MASTER]
+init-hook='import sys; sys.path.append(".")'
+
+[FORMAT]
+max-line-length=120
+
+[MESSAGES CONTROL]
+disable=
+    line-too-long, # checked with flake8
+    missing-function-docstring,
+    missing-module-docstring,
+    super-with-arguments
