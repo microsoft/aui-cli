@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "aui-cli"
+version = "0.1.0"
+description = "Audience Insights CLI"
+authors = ["Vladimir Ritz Bossicard <vlritz@microsoft.com>"]
+license = "MIT"
+packages = [
+    { include = "aui_cli", from = "src" },
+]
+
+[tool.poetry.scripts]
+aui-cli = "aui_cli.__main__:main"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+knack = "^0.8.2"
+customerinsights = "^1.0.8"
+msrest = "^0.6.21"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
