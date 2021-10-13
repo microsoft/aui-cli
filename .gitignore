@@ -1,9 +1,6 @@
 # Log files
 *.log
 
-# Local .vscode configuration
-.vscode
-
 # Python files
 env/
 *.pyc
