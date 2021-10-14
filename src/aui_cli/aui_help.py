@@ -18,7 +18,12 @@ class AuiHelp(CLIHelp):
 
     def __init__(self, cli_ctx=None):
         # import command group help
+        import aui_cli.groups.datasources._help
         import aui_cli.groups.instances._help
+        import aui_cli.groups.measures._help
+        import aui_cli.groups.roles._help
+        import aui_cli.groups.search._help
+        import aui_cli.groups.segments._help
         super(AuiHelp, self).__init__(cli_ctx=cli_ctx,
                                       welcome_message=WELCOME_MESSAGE)
 
