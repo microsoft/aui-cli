@@ -6,21 +6,14 @@
 from aui_cli.common.services import get_client, get_custom_headers
 
 
-def list_instances():
+def show_configuration(instance_id):
     """
-    Lists all instances.
-    """
+    Show search configuration
 
-    client = get_client()
-
-    return client.getallinstances(custom_headers=get_custom_headers())
-
-
-def show_instance(instance_id):
-    """
-    Show an instance
+    :param instance_id: ID of the instance
     """
 
     client = get_client()
 
-    return client.getinstancemetadata(instance_id, custom_headers=get_custom_headers())
+    return client.getsearchconfiguration(instance_id=instance_id,
+                                         custom_headers=get_custom_headers())
