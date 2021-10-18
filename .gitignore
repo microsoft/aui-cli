@@ -1,6 +1,9 @@
 # Log files
 *.log
 
+# VSCode files
+.vscode
+
 # Python files
 env/
 *.pyc
