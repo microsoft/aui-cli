@@ -8,7 +8,7 @@ from aui_cli.common.services import get_client, get_custom_headers
 
 def show_configuration(instance_id):
     """
-    Show search configuration
+    Show search configuration.
 
     :param instance_id: ID of the instance
     """

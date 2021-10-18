@@ -7,6 +7,12 @@ from collections import OrderedDict
 
 
 def transform_datasources_table_output(result):
+    """
+    Formats a list of datasources.
+
+    :param result: list of datasources JSON object
+    """
+
     table_output = []
     for item in result:
         table_output.append(_transform_datasource_row(item))
@@ -15,6 +21,12 @@ def transform_datasources_table_output(result):
 
 
 def transform_datasource_table_output(result):
+    """
+    Formats a datasource.
+
+    :param result: datasource JSON object
+    """
+
     table_output = [_transform_datasource_row(result)]
 
     return table_output

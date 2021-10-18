@@ -9,6 +9,12 @@ from ._format import (transform_roles_table_output)
 
 
 def load_roles_commands(cli_command_loader):
+    """
+    Registers the module's commands.
+
+    :param cli_command_loader: knack command loader
+    """
+
     with CommandGroup(cli_command_loader, 'roles', 'aui_cli.groups.roles.{}') as group:
         group.command('list', 'commands#list_roles',
                       table_transformer=transform_roles_table_output)
@@ -19,5 +25,11 @@ def load_roles_commands(cli_command_loader):
 
 
 def load_roles_arguments(cli_command_loader):
+    """
+    Registers the commands' arguments.
+
+    :param cli_command_loader: knack command loader
+    """
+
     with ArgumentsContext(cli_command_loader, 'roles') as arguments:
         arguments.argument('instance_id', options_list=('--instance-id'))

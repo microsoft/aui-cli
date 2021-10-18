@@ -10,6 +10,12 @@ from ._format import (transform_datasource_table_output,
 
 
 def load_datasources_commands(cli_command_loader):
+    """
+    Registers the module's commands.
+
+    :param cli_command_loader: knack command loader
+    """
+
     with CommandGroup(cli_command_loader, 'datasources', 'aui_cli.groups.datasources.{}') as group:
         group.command('list', 'commands#list_datasources',
                       table_transformer=transform_datasources_table_output)
@@ -19,6 +25,12 @@ def load_datasources_commands(cli_command_loader):
 
 
 def load_datasources_arguments(cli_command_loader):
+    """
+    Registers the commands' arguments.
+
+    :param cli_command_loader: knack command loader
+    """
+
     with ArgumentsContext(cli_command_loader, 'datasources list') as arguments:
         arguments.argument('instance_id', options_list=('--instance-id'))
     with ArgumentsContext(cli_command_loader, 'datasources show') as arguments:

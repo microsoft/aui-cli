@@ -19,6 +19,8 @@ def list_instances():
 def show_instance(instance_id):
     """
     Show an instance
+
+    :param instance_id: ID of the instance
     """
 
     client = get_client()

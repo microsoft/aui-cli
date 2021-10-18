@@ -7,6 +7,12 @@ from collections import OrderedDict
 
 
 def transform_instances_table_output(result):
+    """
+    Formats a list of instances.
+
+    :param result: list of instances JSON object
+    """
+
     table_output = []
     for item in result:
         table_output.append(_transform_instance_row(item))
@@ -15,6 +21,12 @@ def transform_instances_table_output(result):
 
 
 def transform_instance_table_output(result):
+    """
+    Formats an instance.
+
+    :param result: instance JSON object
+    """
+
     table_output = [_transform_instance_row(result)]
 
     return table_output
