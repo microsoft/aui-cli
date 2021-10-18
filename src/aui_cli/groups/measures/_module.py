@@ -10,6 +10,12 @@ from ._format import (transform_measure_table_output,
 
 
 def load_measures_commands(cli_command_loader):
+    """
+    Registers the module's commands.
+
+    :param cli_command_loader: knack command loader
+    """
+
     with CommandGroup(cli_command_loader, 'measures', 'aui_cli.groups.measures.{}') as group:
         group.command('list', 'commands#list_measures',
                       table_transformer=transform_measures_table_output)
@@ -19,6 +25,12 @@ def load_measures_commands(cli_command_loader):
 
 
 def load_measures_arguments(cli_command_loader):
+    """
+    Registers the commands' arguments.
+
+    :param cli_command_loader: knack command loader
+    """
+
     with ArgumentsContext(cli_command_loader, 'measures list') as arguments:
         arguments.argument('instance_id', options_list=('--instance-id'))
     with ArgumentsContext(cli_command_loader, 'measures show') as arguments:

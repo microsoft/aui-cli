@@ -7,6 +7,12 @@ from collections import OrderedDict
 
 
 def transform_measures_table_output(result):
+    """
+    Formats a list of measures.
+
+    :param result: list of measures JSON object
+    """
+
     table_output = []
     for item in result:
         table_output.append(_transform_measure_row(item))
@@ -15,6 +21,12 @@ def transform_measures_table_output(result):
 
 
 def transform_measure_table_output(result):
+    """
+    Formats a measures.
+
+    :param result: measure JSON object
+    """
+
     table_output = [_transform_measure_row(result)]
 
     return table_output

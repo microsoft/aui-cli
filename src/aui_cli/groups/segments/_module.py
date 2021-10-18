@@ -9,6 +9,12 @@ from ._format import (transform_segments_table_output)
 
 
 def load_segments_commands(cli_command_loader):
+    """
+    Registers the module's commands.
+
+    :param cli_command_loader: knack command loader
+    """
+
     with CommandGroup(cli_command_loader, 'segments', 'aui_cli.groups.segments.{}') as group:
         group.command('list', 'commands#list_segments',
                       table_transformer=transform_segments_table_output)
@@ -19,6 +25,12 @@ def load_segments_commands(cli_command_loader):
 
 
 def load_segments_arguments(cli_command_loader):
+    """
+    Registers the commands' arguments.
+
+    :param cli_command_loader: knack command loader
+    """
+
     with ArgumentsContext(cli_command_loader, 'segments') as arguments:
         arguments.argument('instance_id', options_list=('--instance-id'))
     with ArgumentsContext(cli_command_loader, 'segments activate') as arguments:
