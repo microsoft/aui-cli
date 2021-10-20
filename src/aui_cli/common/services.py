@@ -17,7 +17,7 @@ def get_client():
 
     base_url = GLOBAL_CONFIG.get("endpoint", "base_url", None)
     if base_url:
-        logger.info(f'Using base url: {base_url}')
+        logger.info('Using base url: %s', base_url)
     return CustomerInsights(base_url)
 
 
