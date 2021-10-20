@@ -8,4 +8,5 @@ max-line-length=120
 disable=
     line-too-long, # checked with flake8
     missing-module-docstring,
-    super-with-arguments
+    super-with-arguments,
+    trailing-newlines
