@@ -1,0 +1,12 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "src/aui_cli"
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "src/aui_cli"
+    ]
+}
