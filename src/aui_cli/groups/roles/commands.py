@@ -14,8 +14,8 @@ def list_roles(instance_id):
     """
     client = get_client()
 
-    return client.getallroledefinitions(instance_id=instance_id,
-                                        custom_headers=get_custom_headers())
+    return client.get_all_role_definitions(instance_id=instance_id,
+                                           custom_headers=get_custom_headers())
 
 
 def list_role_assignments(instance_id):
@@ -26,8 +26,8 @@ def list_role_assignments(instance_id):
     """
     client = get_client()
 
-    return client.getallroleassignments(instance_id=instance_id,
-                                        custom_headers=get_custom_headers())
+    return client.get_all_role_assignments(instance_id=instance_id,
+                                           custom_headers=get_custom_headers())
 
 
 def show_user_role(instance_id):
@@ -38,5 +38,5 @@ def show_user_role(instance_id):
     """
     client = get_client()
 
-    return client.getcurrentuserrole(instance_id=instance_id,
-                                     custom_headers=get_custom_headers())
+    return client.get_current_user_role(instance_id=instance_id,
+                                        custom_headers=get_custom_headers())
