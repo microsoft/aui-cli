@@ -45,14 +45,44 @@ It is based on the [customerinsights](https://pypi.org/project/customerinsights)
         segments    : Commands to manage segments.
     ```
 
+1. Get help on any command with `--help`:
+
+    ```bash
+    > aui-cli instances list --help
+
+    Command
+        aui-cli instances list : Lists all instances.
+
+    Arguments
+
+    Global Arguments
+        --debug            : Increase logging verbosity to show all debug logs.
+        --help -h          : Show this help message and exit.
+        --only-show-errors : Only show errors, suppressing warnings.
+        --output -o        : Output format.  Allowed values: json, jsonc, none, table, tsv, yaml, yamlc.
+                            Default: json.
+        --query            : JMESPath query string. See http://jmespath.org/ for more information and
+                            examples.
+        --verbose          : Increase logging verbosity. Use --debug for full debug logs.
+    ```
+
 ## Configuration
 
-Add the `api_key` and OAuth token in the file `~/.aui-cli/config`
+All configuration values are stored in the file `~/.aui-cli/config`, automatically created the first time the application is run.
+
+In the `[autentication]` section, add your `api_key` and OAuth token:
 
 ```text
 [authentication]
 api_key = REDACTED
 token = REDACTED
+```
+
+An alternate base url (default is `https://api.ci.ai.dynamics.com/v1`) can be defined in the `[endpoint]` section:
+
+```text
+[endpoint]
+base_url = https://api.ci.ai.dynamics-alternate.com/v1
 ```
 
 ## Contributing

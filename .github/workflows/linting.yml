@@ -1,10 +1,12 @@
-name: Pylint
+name: Linting
 
 on:
   push:
+    branches:
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   build:
