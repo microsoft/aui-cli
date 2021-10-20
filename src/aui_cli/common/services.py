@@ -4,7 +4,10 @@
 # --------------------------------------------------------------------------------------------
 
 from dynamics.customerinsights.api import CustomerInsights
+from knack.log import get_logger
 from .config import GLOBAL_CONFIG
+
+logger = get_logger(__name__)
 
 
 def get_client():
@@ -12,7 +15,10 @@ def get_client():
     Returns an authenticated CustomerInsights client.
     """
 
-    return CustomerInsights()
+    base_url = GLOBAL_CONFIG.get("endpoint", "base_url", None)
+    if base_url:
+        logger.info(f'Using base url: {base_url}')
+    return CustomerInsights(base_url)
 
 
 def get_custom_headers():
