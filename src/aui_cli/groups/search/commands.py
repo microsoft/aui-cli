@@ -15,5 +15,5 @@ def show_configuration(instance_id):
 
     client = get_client()
 
-    return client.getsearchconfiguration(instance_id=instance_id,
-                                         custom_headers=get_custom_headers())
+    return client.get_search_configuration(instance_id=instance_id,
+                                           custom_headers=get_custom_headers())

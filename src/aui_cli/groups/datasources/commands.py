@@ -15,8 +15,8 @@ def list_datasources(instance_id):
 
     client = get_client()
 
-    return client.getalldatasources(instance_id=instance_id,
-                                    custom_headers=get_custom_headers())
+    return client.get_all_entity_metadata(instance_id=instance_id,
+                                          custom_headers=get_custom_headers())
 
 
 def show_datasource(instance_id, data_source_id):
@@ -29,6 +29,6 @@ def show_datasource(instance_id, data_source_id):
 
     client = get_client()
 
-    return client.getdatasource(instance_id=instance_id,
-                                data_source_id=data_source_id,
-                                custom_headers=get_custom_headers())
+    return client.get_data_source(instance_id=instance_id,
+                                  data_source_id=data_source_id,
+                                  custom_headers=get_custom_headers())

@@ -15,9 +15,8 @@ def list_segments(instance_id):
 
     client = get_client()
 
-    return client.getallsegments(
-        instance_id=instance_id,
-        custom_headers=get_custom_headers())
+    return client.get_all_segments(instance_id=instance_id,
+                                   custom_headers=get_custom_headers())
 
 
 def activate_segment(instance_id, segment_name):
@@ -30,10 +29,9 @@ def activate_segment(instance_id, segment_name):
 
     client = get_client()
 
-    return client.activatesegment(
-        instance_id=instance_id,
-        segment_name=segment_name,
-        custom_headers=get_custom_headers())
+    return client.activate_segment(instance_id=instance_id,
+                                   segment_name=segment_name,
+                                   custom_headers=get_custom_headers())
 
 
 def deactivate_segment(instance_id, segment_name):
@@ -46,6 +44,6 @@ def deactivate_segment(instance_id, segment_name):
 
     client = get_client()
 
-    return client.deactivatesegment(instance_id=instance_id,
-                                    segment_name=segment_name,
-                                    custom_headers=get_custom_headers())
+    return client.deactivate_segment(instance_id=instance_id,
+                                     segment_name=segment_name,
+                                     custom_headers=get_custom_headers())
