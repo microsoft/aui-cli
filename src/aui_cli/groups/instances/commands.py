@@ -13,7 +13,7 @@ def list_instances():
 
     client = get_client()
 
-    return client.getallinstances(custom_headers=get_custom_headers())
+    return client.get_all_instances(custom_headers=get_custom_headers())
 
 
 def show_instance(instance_id):
@@ -25,4 +25,4 @@ def show_instance(instance_id):
 
     client = get_client()
 
-    return client.getinstancemetadata(instance_id, custom_headers=get_custom_headers())
+    return client.get_instance_metadata(instance_id, custom_headers=get_custom_headers())

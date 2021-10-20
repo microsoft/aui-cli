@@ -15,8 +15,8 @@ def list_measures(instance_id):
 
     client = get_client()
 
-    return client.getalistofmeasuresmetadata(instance_id=instance_id,
-                                             custom_headers=get_custom_headers())
+    return client.get_a_list_of_measures_metadata(instance_id=instance_id,
+                                                  custom_headers=get_custom_headers())
 
 
 def show_measure(instance_id, measure_name):
@@ -29,6 +29,6 @@ def show_measure(instance_id, measure_name):
 
     client = get_client()
 
-    return client.getmetadataforameasure(instance_id=instance_id,
-                                         measure_name=measure_name,
-                                         custom_headers=get_custom_headers())
+    return client.get_metadata_for_a_measure(instance_id=instance_id,
+                                             measure_name=measure_name,
+                                             custom_headers=get_custom_headers())

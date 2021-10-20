@@ -3,8 +3,7 @@
 # Licensed under the MIT License. See License.txt in the project root for license information.
 # --------------------------------------------------------------------------------------------
 
-from dynamics.customerinsights.api import CustomerInsightsAPIAPIMPublic
-from msrest.authentication import BasicTokenAuthentication
+from dynamics.customerinsights.api import CustomerInsights
 from .config import GLOBAL_CONFIG
 
 
@@ -13,9 +12,7 @@ def get_client():
     Returns an authenticated CustomerInsights client.
     """
 
-    auth_token = GLOBAL_CONFIG.get("authentication", "token")
-    auth = BasicTokenAuthentication({'access_token': auth_token})
-    return CustomerInsightsAPIAPIMPublic(credentials=auth)
+    return CustomerInsights()
 
 
 def get_custom_headers():
@@ -24,7 +21,9 @@ def get_custom_headers():
     """
 
     api_key = GLOBAL_CONFIG.get("authentication", "api_key")
+    auth_token = GLOBAL_CONFIG.get("authentication", "token")
     return {
         'Cache-Control': 'no-cache',
+        'Authorization': f'Bearer {auth_token}',
         'Ocp-Apim-Subscription-Key': api_key
     }
