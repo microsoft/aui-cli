@@ -32,7 +32,7 @@ class AuiCLI(CLI):
 
     def exception_handler(self, ex):
         if isinstance(ex, AuIApiError):
-            logger.error(ex.message)
+            logger.error(ex.to_string())
             return 1
 
         return super(AuiCLI, self).exception_handler(ex)
