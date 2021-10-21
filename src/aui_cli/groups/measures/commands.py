@@ -3,6 +3,7 @@
 # Licensed under the MIT License. See License.txt in the project root for license information.
 # --------------------------------------------------------------------------------------------
 
+from aui_cli.common.exceptions import check_exception
 from aui_cli.common.services import get_client, get_custom_headers
 
 
@@ -15,8 +16,9 @@ def list_measures(instance_id):
 
     client = get_client()
 
-    return client.get_a_list_of_measures_metadata(instance_id=instance_id,
-                                                  custom_headers=get_custom_headers())
+    response = client.get_a_list_of_measures_metadata(instance_id=instance_id,
+                                                      custom_headers=get_custom_headers())
+    return check_exception(response)
 
 
 def show_measure(instance_id, measure_name):
@@ -29,6 +31,7 @@ def show_measure(instance_id, measure_name):
 
     client = get_client()
 
-    return client.get_metadata_for_a_measure(instance_id=instance_id,
-                                             measure_name=measure_name,
-                                             custom_headers=get_custom_headers())
+    response = client.get_metadata_for_a_measure(instance_id=instance_id,
+                                                 measure_name=measure_name,
+                                                 custom_headers=get_custom_headers())
+    return check_exception(response)
