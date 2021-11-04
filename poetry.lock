@@ -45,7 +45,7 @@ unicode_backport = ["unicodedata2"]
 name = "colorama"
 version = "0.4.4"
 description = "Cross-platform colored terminal text."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -113,7 +113,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "knack"
-version = "0.8.2"
+version = "0.8.3"
 description = "A Command-Line Interface framework"
 category = "main"
 optional = false
@@ -121,7 +121,6 @@ python-versions = "*"
 
 [package.dependencies]
 argcomplete = "*"
-colorama = "*"
 jmespath = "*"
 pygments = "*"
 pyyaml = "*"
@@ -326,7 +325,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "9696539682da21d089aad263387dbe30e286a55cd4baab5dc03e2929e1100e7a"
+content-hash = "f9558ce9d309e8d3507fc24a49d7da79b8e2d986757a238ad615f8e733c672eb"
 
 [metadata.files]
 argcomplete = [
@@ -374,8 +373,8 @@ jmespath = [
     {file = "jmespath-0.10.0.tar.gz", hash = "sha256:b85d0567b8666149a93172712e68920734333c0ce7e89b78b3e987f71e5ed4f9"},
 ]
 knack = [
-    {file = "knack-0.8.2-py3-none-any.whl", hash = "sha256:5239f85873f524e213e81af7b784bfc08b654006eb418ae0042b9019552399e9"},
-    {file = "knack-0.8.2.tar.gz", hash = "sha256:4eaa50a1c5e79d1c5c8e5e1705b661721b0b83a089695e59e229cc26c64963b9"},
+    {file = "knack-0.8.3-py3-none-any.whl", hash = "sha256:502d9c946890c8dcbc165551eaaf1f1e36302a028cc589626ae7a75e3ea40a95"},
+    {file = "knack-0.8.3.tar.gz", hash = "sha256:8d2e07fef079029096b815286b8c0a4c28aac021c4cf7b4cad31b1402d406f3b"},
 ]
 lazy-object-proxy = [
     {file = "lazy-object-proxy-1.6.0.tar.gz", hash = "sha256:489000d368377571c6f982fba6497f2aa13c6d1facc40660963da62f5c379726"},
