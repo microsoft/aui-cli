@@ -13,7 +13,7 @@ aui-cli = "aui_cli.__main__:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-knack = "^0.8.2"
+knack = "^0.9.0"
 customerinsights = "^1.0.8"
 msrest = "^0.6.21"
 
