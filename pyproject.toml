@@ -15,7 +15,7 @@ aui-cli = "aui_cli.__main__:main"
 python = "^3.9"
 knack = "^0.9.0"
 customerinsights = "^1.0.8"
-msrest = "^0.6.21"
+msrest = "^0.7.0"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^4.0.1"
